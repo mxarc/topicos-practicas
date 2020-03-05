@@ -52,7 +52,9 @@ public class Listener implements ActionListener, ItemListener {
         }
     }
 
+    // Este metodo
     public boolean ValidaDatos() {
+        // Validar que los datos no estén vacios
         String texto1 = this.frame.txtNombre.getText().trim();
         if (texto1.equals("")) {
             JOptionPane.showMessageDialog(null, "Nombre no debe estar en blanco");
@@ -63,10 +65,13 @@ public class Listener implements ActionListener, ItemListener {
             JOptionPane.showMessageDialog(null, "Apellido no debe estar en blanco");
             return false;
         }
+        // Obtener edad del textframe
         String edadTxt = this.frame.txtEdad.getText().trim();
+        // Validar que el dato sea de tipo numero
         try {
          int edad = Integer.parseInt(edadTxt);
         } catch (NumberFormatException ex) {
+            // Si no es un numero mostrar un dialogo...
             JOptionPane.showMessageDialog(null, "Edad debe ser un numero");
             return false;
         }

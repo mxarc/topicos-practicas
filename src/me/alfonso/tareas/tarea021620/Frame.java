@@ -1,12 +1,10 @@
 package me.alfonso.tareas.tarea021620;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 // Clase Frame, contiene capa de presentación
 public class Frame extends JFrame {
-
     // Objetos UI
     JTextField txtNombre,txtApellido, txtEdad;
     JCheckBox chkIngles, chkFrances, chkItaliano;
@@ -35,17 +33,15 @@ public class Frame extends JFrame {
         add(chkFrances);
         chkItaliano= new JCheckBox("Italiano");
         add(chkItaliano);
-
-
         btnAceptar= new JButton("Aceptar");
         btnLimpiar= new JButton("Limpiar");
         add(btnAceptar);
         add(btnLimpiar);
         eticheck= new JLabel("                                 ");
-
         add(eticheck);
-
+        // Crear instancia listener
         Listener listener = new Listener(this);
+        // Adjuntar listener a los botones y checklist
         btnAceptar.addActionListener(listener);
         btnLimpiar.addActionListener(listener);
         chkIngles.addItemListener(listener);

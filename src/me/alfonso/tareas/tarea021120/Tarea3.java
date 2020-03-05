@@ -2,9 +2,7 @@ package me.alfonso.tareas.tarea021120;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import java.awt.event.*;
 
 public class Tarea3 extends JFrame {
 
@@ -35,7 +33,6 @@ public class Tarea3 extends JFrame {
         removeButton = new JButton("Remove");
         removeButton.setMnemonic('R');
         add(removeButton);
-
 
         JLabel label4 = new JLabel(" ");
         add(label4);
